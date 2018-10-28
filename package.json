@@ -8,10 +8,13 @@
   "private": false,
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
+    "git-pages": "^0.8.1",
     "url-loader": "^1.1.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
