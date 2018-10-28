@@ -15,7 +15,7 @@ export default class Engine {
         window.requestAnimationFrame(this.loop.bind(this));
     }
 
-    // the page and makes the canvas have the whole width and height of the browser
+    // Refreshes the canvas(frames) and makes the canvas have the whole width and height of the browser
     loop() {
         let time = new Date().getTime();
         let dt = (time - this.lastTime) / 1000;
