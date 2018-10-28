@@ -1,4 +1,5 @@
 import GameObject from "./gameobject";
+import Input from "./input";
 
 // Engine Class for our RPG Game
 export default class Engine {
@@ -16,6 +17,8 @@ export default class Engine {
         this.lastTime = new Date().getTime();
 
         this.objs = [];
+
+        this.input = new Input();
 
         window.requestAnimationFrame(this.loop.bind(this));
     }
@@ -36,6 +39,9 @@ export default class Engine {
         let dt = (time - this.lastTime) / 1000;
 
         // Do updates here!
+        if(this.update) {
+            this.update(dt);
+        }
 
         this.ctx.fillStyle = "#303030";
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
