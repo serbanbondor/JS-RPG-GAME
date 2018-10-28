@@ -15,8 +15,7 @@ export default class Engine {
     }
 
     loop() {
-        let time = new Date().getTime();
-        let dt = (time - this.lastTime) / 1000;
+        
 
         // Do updates here!
 
